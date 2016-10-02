@@ -29,7 +29,6 @@ def register():
 	if request.method == 'GET':
 		return render_template("register.html")
 
-
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -46,7 +45,6 @@ def upload():
 	price = request.form['price']
 	save_location = "/images/" + int(round(time.time() * 1000))
 	return render_template('upload.html')
-
 
 if __name__ == "__main__":
 	app.run(debug=True)
